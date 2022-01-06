@@ -1,3 +1,3 @@
-module github.com/tnfallstack/gowebdev
+module github.com/tvn9/gowebdev
 
 go 1.17
