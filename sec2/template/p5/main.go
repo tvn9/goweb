@@ -7,10 +7,10 @@ import (
 	"text/template"
 )
 
-var tmpl template.Template
+var tmpl *template.Template
 
 func init() {
-	tmpl = *template.Must(template.ParseGlob("templates/*.html"))
+	tmpl = template.Must(template.ParseGlob("templates/*.html"))
 }
 
 func main() {
