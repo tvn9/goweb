@@ -1,7 +1,13 @@
 // Creating HTML template with string text
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+	"log"
+	"os"
+	"strings"
+)
 
 func main() {
 	title := "This is the home page!"
@@ -19,4 +25,13 @@ func main() {
 `
 
 	fmt.Println(tpl)
+
+	// Create a file to save as index.HTML
+	index, err := os.Create("index.html")
+	if err != nil {
+		log.Fatal("error creating file", err)
+	}
+	defer index.Close()
+
+	io.Copy(index, strings.NewReader(tpl))
 }
