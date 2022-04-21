@@ -1,3 +1,4 @@
+// template.ParseFiles example
 package main
 
 import (
