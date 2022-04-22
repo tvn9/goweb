@@ -18,8 +18,6 @@ type Truck struct {
 	Speed     int
 }
 
-type Trucks []Truck
-
 var tmpl *template.Template
 
 func init() {
@@ -55,7 +53,7 @@ func main() {
 		Speed:     100,
 	}
 
-	trucks := Trucks{f150, sil150, sierra1500}
+	trucks := []Truck{f150, sil150, sierra1500}
 
 	fn, err := os.Create("index.html")
 	if err != nil {
@@ -83,5 +81,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(trucks)
+	for _, v := range trucks {
+		fmt.Printf("%s\n", v.Make)
+		fmt.Printf("%s\n", v.Model)
+		fmt.Printf("%d\n", v.YearBuild)
+		fmt.Printf("%d\n", v.TowCap)
+		fmt.Printf("%d\n", v.LoadCap)
+		fmt.Printf("%d\n", v.Speed)
+	}
 }
