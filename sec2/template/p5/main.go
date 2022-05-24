@@ -10,30 +10,25 @@ import (
 var tmpl *template.Template
 
 func init() {
+	// Must function is just a wrapper with error checking for template.ParseGlob
 	tmpl = template.Must(template.ParseGlob("templates/*.html"))
 }
 
+func executeTmpl(tmpl *template.Template, str ...string) (err error) {
+	file, err := os.Create("index.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	for _, f := range str {
+		tmpl.ExecuteTemplate(file, f, nil)
+	}
+	return err
+}
+
 func main() {
-	nf, err := os.Create("index.html")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer nf.Close()
-
-	err = tmpl.ExecuteTemplate(nf, "base1.html", nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-	err = tmpl.ExecuteTemplate(nf, "base2.html", nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-	err = tmpl.ExecuteTemplate(nf, "base3.html", nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	err = tmpl.ExecuteTemplate(os.Stdout, "base2.html", nil)
+	err := executeTmpl(tmpl, "base1.html", "base2.html", "base3.html")
 	if err != nil {
 		log.Fatal(err)
 	}

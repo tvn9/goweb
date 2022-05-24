@@ -28,12 +28,9 @@ func main() {
 	defer file.Close()
 
 	// Let execute a specific template to terminal
-	err = executeTmpl(tmpl, "base.html", "base1.html", "base2.html", "base3.html")
-	if err != nil {
-		log.Fatal(err)
-	}
+	errCheck(executeTmpl(tmpl, "base.html", "base1.html", "base2.html", "base3.html"))
 
-	err = tmpl.Execute(os.Stdout, nil)
+	err = tmpl.Execute(file, tmpl)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -44,4 +41,10 @@ func executeTmpl(tmpl *template.Template, str ...string) (err error) {
 		err = tmpl.ExecuteTemplate(os.Stdout, f, nil)
 	}
 	return err
+}
+
+func errCheck(err error) {
+	if err != nil {
+		panic(err)
+	}
 }

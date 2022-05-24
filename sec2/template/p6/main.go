@@ -10,7 +10,7 @@ import (
 var tmpl *template.Template
 
 func init() {
-	tmpl = template.Must(template.ParseFiles("base1.html"))
+	tmpl = template.Must(template.ParseGlob("*.html"))
 }
 func main() {
 	fn, err := os.Create("index.html")
@@ -24,7 +24,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = tmpl.ExecuteTemplate(fn, "base1.html", 42)
+	err = tmpl.ExecuteTemplate(fn, "base1.html", "base1.html")
 	if err != nil {
 		log.Fatal(err)
 	}
