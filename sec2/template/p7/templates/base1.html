@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Go HTML Template</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go HTML Template</title>
+</head>
 
-    <body>
-        {{$name := .}}
-        <h1>Passing data to html template using variable name {{$name}}</h1>
-    </body>
+<body>
+  <h3>Person Info</h3>
+  <p>First Name: {{.Fname}}</p>
+  <p>Last Name: {{.Lname}}</p>
+  <p>Job: {{.Job}}</p>
+  <p>Age: {{.Age}}</p>
+  <h3>Programming Language: </h3>
+  <ul>
+    {{range $index, $element := .ProLg}}
+    <li>{{$index}} - {{$element}}</li>
+    {{end}}
+  </ul>
+</body>
 
 </html>
