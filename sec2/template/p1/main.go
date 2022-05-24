@@ -27,11 +27,11 @@ func main() {
 	fmt.Println(tpl)
 
 	// Create a file to save as index.HTML
-	index, err := os.Create("index.html")
+	file, err := os.Create("index.html")
 	if err != nil {
 		log.Fatal("error creating file", err)
 	}
-	defer index.Close()
+	defer file.Close()
 
-	io.Copy(index, strings.NewReader(tpl))
+	io.Copy(file, strings.NewReader(tpl))
 }

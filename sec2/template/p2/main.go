@@ -37,8 +37,8 @@ func main() {
 	fmt.Println(tpl)
 
 	fileName := strings.ToLower(args[0])
-	// Create a file to save as index.HTML
-	fn, err := os.Create(fileName)
+	// Create a file to save as file name you have entered.html
+	fn, err := os.Create(fileName + ".html")
 	if err != nil {
 		log.Fatal("error creating file", err)
 	}

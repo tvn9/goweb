@@ -2,25 +2,46 @@
 package main
 
 import (
+	"html/template"
 	"log"
 	"os"
-	"text/template"
 )
 
+var tmpl *template.Template
+
 func main() {
-	tpl, err := template.ParseFiles("base.html")
+	tmpl, err := tmpl.ParseFiles("base.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	// let parse some more templates
+	tmpl, err = tmpl.ParseFiles("base1.html", "base2.html", "base3.html")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	nf, err := os.Create("index.html")
+	// Create a file name index.html
+	file, err := os.Create("index.html")
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer nf.Close()
+	defer file.Close()
 
-	err = tpl.Execute(nf, nil)
+	// Let execute a specific template to terminal
+	err = executeTmpl(tmpl, "base.html", "base1.html", "base2.html", "base3.html")
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	err = tmpl.Execute(os.Stdout, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func executeTmpl(tmpl *template.Template, str ...string) (err error) {
+	for _, f := range str {
+		err = tmpl.ExecuteTemplate(os.Stdout, f, nil)
+	}
+	return err
 }
