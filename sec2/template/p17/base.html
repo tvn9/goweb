@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composition</title>
+</head>
+
+<body>
+  <h1>Computer Science Courses</h1>
+  <h2>{{.Year}}</h2>
+  <h3>{{.Fall.Term}}</h3>
+  <ul>
+    {{range .Fall.Courses}}
+    <li>{{.Number}} - {{.Name}} - {{.Units}}</li>
+    {{end}}
+  </ul>
+
+  <h3>{{.Spring.Term}}</h3>
+  <ul>
+    {{range .Spring.Courses}}
+    <li>{{.Number}} - {{.Name}} - {{.Units}}</li>
+    {{end}}
+  </ul>
+</body>
+
+</html>
