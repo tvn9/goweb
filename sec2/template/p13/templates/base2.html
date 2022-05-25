@@ -11,9 +11,16 @@
 <body>
     <h1>Passing Go Slice of Struct Data to HTML Template</h1>
     <h2>Go Teamplate Base 2</h2>
+    <h2>Cars Listing</h2>
     <ul>
-        {{range .}}
-        <li>{{.Make}} - {{.Model}}</li>
+        {{range .Cars}}
+        <hr>
+        <li>Owner: {{ft .Owner}}</li>
+        <li>Make: {{uc .Make}}</li>
+        <li>Model: {{.Model}}</li>
+        <li>Type: {{.Type}}</li>
+        <li>Year Built: {{.YearBuilt}}</li>
+        <li>Door: {{.NoDoor}}</li>
         {{end}}
     </ul>
 </body>
