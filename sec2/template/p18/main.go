@@ -67,6 +67,8 @@ func main() {
 
 	ch001.WithDraw(50, 50)
 
+	fmt.Println(ch001.GetDateTime())
+
 	err := ExecuteTmpls("base.html", ch001)
 	if err != nil {
 		log.Fatal(err)
