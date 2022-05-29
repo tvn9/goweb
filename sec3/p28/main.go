@@ -8,11 +8,6 @@ import (
 	"strings"
 )
 
-func handle(conn net.Conn) {
-	defer conn.Close()
-	request(conn)
-}
-
 func request(conn net.Conn) {
 	i := 0
 	scanner := bufio.NewScanner(conn)
@@ -28,6 +23,11 @@ func request(conn net.Conn) {
 		}
 		i++
 	}
+}
+
+func handle(conn net.Conn) {
+	defer conn.Close()
+	request(conn)
 }
 
 func index(conn net.Conn) {
