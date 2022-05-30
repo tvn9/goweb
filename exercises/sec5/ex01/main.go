@@ -19,9 +19,9 @@ func me(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	http.Handle("/", http.HandlerFunc(home))
-	http.Handle("/dog", http.HandlerFunc(dog))
-	http.Handle("/me", http.HandlerFunc(me))
+	http.HandleFunc("/", home)
+	http.HandleFunc("/dog", dog)
+	http.HandleFunc("/me", me)
 
 	http.ListenAndServe(":8080", nil)
 }
