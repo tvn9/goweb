@@ -1,9 +1,9 @@
-// signup validation
 package main
 
 import (
 	"crypto/sha256"
 	"fmt"
+	"hash"
 	"html/template"
 	"net/http"
 
@@ -12,7 +12,7 @@ import (
 
 type user struct {
 	UserName string
-	Password string
+	Password hash.Hash
 	First    string
 	Last     string
 }
@@ -27,11 +27,6 @@ func init() {
 }
 
 func main() {
-	// crypto sha256 encryption
-	h := sha256.New()
-	h.Write([]byte("hello world\n"))
-	fmt.Printf("%x", h.Sum(nil))
-
 	http.HandleFunc("/", index)
 	http.HandleFunc("/about", about)
 	http.HandleFunc("/signup", signup)
@@ -40,12 +35,12 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	u := getUser(r)
+	u := getUser(w, r)
 	tmpl.ExecuteTemplate(w, "index.html", u)
 }
 
 func about(w http.ResponseWriter, r *http.Request) {
-	u := getUser(r)
+	u := getUser(w, r)
 	if !alreadyLoggedIn(r) {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
@@ -58,10 +53,12 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
 	}
+	var u user
 
 	// process form submission
 	if r.Method == http.MethodPost {
-		// get form value
+
+		// get form values
 		un := r.FormValue("username")
 		p := r.FormValue("password")
 		f := r.FormValue("firstname")
@@ -83,12 +80,19 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		dbSessions[c.Value] = un
 
 		// store user in dbUsers
-		u := user{un, p, f, l}
+		bs := sha256.New()
+		bs.Write([]byte(p))
+		fmt.Printf("%x", bs.Sum(nil))
+
+		u = user{
+			un, bs, f, l,
+		}
 		dbUsers[un] = u
+		fmt.Println(u.Password)
 
 		// redirect
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
 	}
-	tmpl.ExecuteTemplate(w, "signup.html", nil)
+	tmpl.ExecuteTemplate(w, "signup.html", u)
 }
