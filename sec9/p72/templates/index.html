@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body> 
+    <h1>Welcome to the Index Page</h1>
+{{if .First}}
+USER NAME {{.UserName}}<br>
+PASSWORD {{.Password}}<br>
+FIRST {{.First}}<br>
+LAST {{.Last}}<br>
+{{else}}
+<h2><a href="/signup">sign up</a></h2>
+<h2><a href="/login">log in</a></h2>
+{{end}}
+
+<br>
+<h2>Go to <a href="/about">The about page</a></h2>
+</body>
+</html>
