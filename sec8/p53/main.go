@@ -13,7 +13,7 @@ func main() {
 
 func foo(w http.ResponseWriter, r *http.Request) {
 	v := r.FormValue("q")
-	fmt.Fprintln(w, "Do my search: " + v)
+	fmt.Fprintln(w, "Do my search: "+v)
 }
 
 // http://localhost:8080/?q=dog
