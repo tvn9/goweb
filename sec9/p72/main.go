@@ -108,7 +108,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		// does the entered password match the stored password?
-		if !u.Password {
+		if !p.Password {
 			http.Error(w, "Username and/or password do not match", http.StatusForbidden)
 			return
 		}
