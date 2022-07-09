@@ -1,44 +1,24 @@
-// Understanding net/http package
-// Exmaple 5 - Header
+// Understanding net/http ServerMux package
 
 package main
 
-import (
-	"html/template"
-	"log"
-	"net/http"
-	"net/url"
-)
+import "net/http"
 
-type Car struct{}
+type someThing struct{}
 
-var tmpl *template.Template
-
-func init() {
-	tmpl = template.Must(template.ParseFiles("index.html"))
-}
-
-func (c Car) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	err := r.ParseForm()
-	if err != nil {
-		log.Fatal(err)
+func (s someThing) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	switch r.URL.Path {
+	case "/home":
+		fallthrough
+	case "/":
+		w.Write([]byte("<h1>Welcome to homepage!</h1>"))
+	case "/about":
+		w.Write([]byte("<h1>You are now on about page.</h1>"))
 	}
-
-	data := struct {
-		Method      string
-		URL         *url.URL
-		Submissions map[string][]string
-		Header      http.Header
-	}{
-		r.Method,
-		r.URL,
-		r.Form,
-		r.Header,
-	}
-	tmpl.ExecuteTemplate(w, "index.html", data)
 }
 
 func main() {
-	var c Car
-	http.ListenAndServe(":8080", c)
+	var s someThing
+
+	http.ListenAndServe(":8080", s)
 }
