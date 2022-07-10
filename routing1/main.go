@@ -1,4 +1,5 @@
 // Understanding net/http ServerMux package
+// Routing example 1
 
 package main
 
