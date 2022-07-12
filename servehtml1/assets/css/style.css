@@ -1,0 +1,15 @@
+body {
+   color: gray;
+}
+
+.image-box {
+   width: 80%;
+   margin: auto;
+   text-align: center;
+}
+
+img {
+   width: 700;
+   border-radius: 20px;
+   box-shadow: 0 8px 12px 0 #00000055, 0 6px 20px 0 #00000059; 
+}
