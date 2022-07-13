@@ -1,0 +1,15 @@
+{{template "header"}}
+
+<form method="POST" enctype="multipart/form-data">
+    <label for="fileName">Choose File To Upload</label>
+    <input type="file" id="fileName" name="q">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+{{if .}}
+<h1>Here are the contents of the file:</h1>
+{{.}}
+{{end}}
+
+{{template "footer"}}

@@ -16,7 +16,7 @@ func init() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	t := r.FormValue("textArea")
+	var t string
 
 	log.Println(r.Method)
 	if r.Method == http.MethodPost {

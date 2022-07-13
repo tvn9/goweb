@@ -14,8 +14,9 @@
       <input type="submit" id="button btn" value="Submit">
    </form>
 
-   <textarea name="textArea" id="text-area" cols="100" rows="30">
-      {{.}}
-   </textarea>
+   {{if .}}
+   <p>{{.}}</p>
+   {{end}}
+   
 </body>
 </html>
