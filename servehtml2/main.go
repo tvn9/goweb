@@ -52,6 +52,7 @@ func main() {
 	http.HandleFunc("/about", about)
 	http.HandleFunc("/contact", contact)
 	http.HandleFunc("/apply", apply)
+	http.Handle("/favicon.ico", http.NotFoundHandler())
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
