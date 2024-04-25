@@ -24,6 +24,8 @@ func main() {
 	if err != nil {
 		log.Fatal("fails to open or create file, error:", err)
 	}
+	defer file.Close()
+
 	_, err = file.WriteString(str)
 	if err != nil {
 		log.Fatal("fails to write to file, error:", err)
