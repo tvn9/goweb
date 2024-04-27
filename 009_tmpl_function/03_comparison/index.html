@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Template Built-in Functions</title>
+</head>
+
+<body>
+   <h1>Using Template Built-in Function</h1>
+
+   <p>
+      {{if gt .Score1 .Score2}}
+      SCORE 1 greater SCORE 2
+      {{end}}
+   </p>
+
+   <p>
+      {{if lt .Score1 .Score2}}
+      SCORE 1 less than SCORE 2
+      {{end}}
+   </p>
+
+   <p>
+      {{if eq .Score1 .Score2}}
+      SCORE 1 = SCORE 2
+      {{end}}
+   </p>
+
+   <p>
+      {{if lt .Score1 100}}
+      SCORE 1 less then 100
+      {{end}}
+   </p>
+
+</body>
+
+</html>

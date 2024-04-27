@@ -1,0 +1,24 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+
+{{block "header" .}}
+{{end}}
+
+{{block "custom-css" .}}
+{{end}}
+
+
+<body>
+   {{block "nav" .}}
+   {{end}}
+   <div class="container">
+
+      {{block "content" .}}
+      {{end}}
+   </div>
+
+</body>
+
+</html>
+{{end}}

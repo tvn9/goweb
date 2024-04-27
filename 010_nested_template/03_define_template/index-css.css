@@ -1,0 +1,31 @@
+.hero {
+   width: 100%;
+}
+
+.hero-image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url("/static/images/catdog.avif") no-repeat center;
+   background-size: contain;
+   width: auto;
+   height: 70vh;
+   text-align: center;
+}
+
+.hero-image h1 {
+   font-size: 6rem;
+   /* color: #2d2e2e; */
+   color: #dbc710;
+   text-shadow: 2px 2px 0 #191918;
+}
+
+.footer-content {
+   position: absolute;
+   bottom: fixed;
+   width: 90%;
+   height: 3rem;
+   margin: 0 auto;
+   text-align: center;
+   /* background: #b1b1b1; */
+}

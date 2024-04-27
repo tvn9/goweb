@@ -1,0 +1,18 @@
+{{template "base" .}}
+
+{{define "custom-css"}}
+<link rel="stylesheet" type="text/css" href="./static/index-css.css">
+{{end}}
+
+{{define "content"}}
+<div class="content">
+
+   <h1>This is the Home Page.</h1>
+   <h2>VEHICLES</h2>
+   {{range .}}
+   <p>Make {{.Make}}</p>
+   <p>Make {{.Model}}</p>
+   <p>Make {{.YearBuilt}}</p>
+   {{end}}
+</div>
+{{end}}

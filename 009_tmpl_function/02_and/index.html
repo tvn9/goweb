@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Template Built-in Function</title>
+</head>
+
+<body>
+   <h1>Using Template built-in function</h1>
+   <h3>Example 1</h3>
+   <p>
+      {{range .}}
+      {{.}}<br>
+      {{end}}
+   </p>
+
+   <h3>Example 2</h3>
+   <p>
+      {{if .}}
+      Example 2 - {{.}}<br>
+      {{end}}
+   </p>
+
+   <h3>Example 3</h3>
+   <p>
+      {{range .}}
+      {{if .Make }}
+      Example 3 - {{.Make}}<br>
+      {{end}}
+      {{end}}
+   </p>
+
+   <h4>Example 4</h4>
+   <p>
+      {{range .}}
+      {{if and .Make .Model .YearBuilt}}
+      Make: {{.Make}}<br>
+      Model: {{.Model}}<br>
+      Year Built: {{.YearBuilt}}<br><br>
+      {{end}}
+      {{end}}
+   </p>
+</body>
+
+</html>
