@@ -46,7 +46,7 @@ func request(conn net.Conn) {
 			m := strings.Fields(ln)[0] // method
 			u := strings.Fields(ln)[1] // uri
 			fmt.Println("***METHOD", m)
-			fmt.Println("***METHOD", u)
+			fmt.Println("***URL", u)
 		}
 
 		if ln == "" {

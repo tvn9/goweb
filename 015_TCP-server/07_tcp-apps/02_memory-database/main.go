@@ -45,6 +45,7 @@ func handle(conn net.Conn) {
 	for scanner.Scan() {
 		ln := scanner.Text()
 		fs := strings.Fields(ln)
+		fmt.Println(ln)
 		// logic
 		if len(fs) < 1 {
 			continue
@@ -56,7 +57,7 @@ func handle(conn net.Conn) {
 			fmt.Fprintf(conn, "%s\r\n", v)
 		case "SET":
 			if len(fs) != 3 {
-				fmt.Fprintln(conn, "EXPECTED VALUE\r\n")
+				fmt.Fprintln(conn, "EXPECTED VALUE")
 				continue
 			}
 			k := fs[1]
