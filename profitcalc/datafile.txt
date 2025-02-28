@@ -1,0 +1,7 @@
+Profit & Loss Report
+	Revenue: 0.00
+	Expenses: 0.00
+	Tax rate: 0.00
+	Earning before tax: 0.00
+	Profit: 0.00
+	Earning over profit ratio: NaN
