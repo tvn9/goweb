@@ -1,0 +1,72 @@
+Tax rate: Tax rate: 0.00 | price: 0.00 | price & tax: 0.00
+, price: Tax rate: 0.00 | price: 0.00 | price & tax: 0.00
+, price & tax: Tax rate: 0.00 | price: 0.00 | price & tax: 0.00
+Tax rate: Tax rate: 0.00 | price: 10.00 | price & tax: 10.00
+, price: Tax rate: 0.00 | price: 10.00 | price & tax: 10.00
+, price & tax: Tax rate: 0.00 | price: 10.00 | price & tax: 10.00
+Tax rate: Tax rate: 0.00 | price: 20.00 | price & tax: 20.00
+, price: Tax rate: 0.00 | price: 20.00 | price & tax: 20.00
+, price & tax: Tax rate: 0.00 | price: 20.00 | price & tax: 20.00
+Tax rate: Tax rate: 0.00 | price: 30.00 | price & tax: 30.00
+, price: Tax rate: 0.00 | price: 30.00 | price & tax: 30.00
+, price & tax: Tax rate: 0.00 | price: 30.00 | price & tax: 30.00
+Tax rate: Tax rate: 0.00 | price: 40.00 | price & tax: 40.00
+, price: Tax rate: 0.00 | price: 40.00 | price & tax: 40.00
+, price & tax: Tax rate: 0.00 | price: 40.00 | price & tax: 40.00
+Tax rate: Tax rate: 0.00 | price: 50.00 | price & tax: 50.00
+, price: Tax rate: 0.00 | price: 50.00 | price & tax: 50.00
+, price & tax: Tax rate: 0.00 | price: 50.00 | price & tax: 50.00
+Tax rate: Tax rate: 0.70 | price: 0.00 | price & tax: 0.00
+, price: Tax rate: 0.70 | price: 0.00 | price & tax: 0.00
+, price & tax: Tax rate: 0.70 | price: 0.00 | price & tax: 0.00
+Tax rate: Tax rate: 0.70 | price: 10.00 | price & tax: 17.00
+, price: Tax rate: 0.70 | price: 10.00 | price & tax: 17.00
+, price & tax: Tax rate: 0.70 | price: 10.00 | price & tax: 17.00
+Tax rate: Tax rate: 0.70 | price: 20.00 | price & tax: 34.00
+, price: Tax rate: 0.70 | price: 20.00 | price & tax: 34.00
+, price & tax: Tax rate: 0.70 | price: 20.00 | price & tax: 34.00
+Tax rate: Tax rate: 0.70 | price: 30.00 | price & tax: 51.00
+, price: Tax rate: 0.70 | price: 30.00 | price & tax: 51.00
+, price & tax: Tax rate: 0.70 | price: 30.00 | price & tax: 51.00
+Tax rate: Tax rate: 0.70 | price: 40.00 | price & tax: 68.00
+, price: Tax rate: 0.70 | price: 40.00 | price & tax: 68.00
+, price & tax: Tax rate: 0.70 | price: 40.00 | price & tax: 68.00
+Tax rate: Tax rate: 0.70 | price: 50.00 | price & tax: 85.00
+, price: Tax rate: 0.70 | price: 50.00 | price & tax: 85.00
+, price & tax: Tax rate: 0.70 | price: 50.00 | price & tax: 85.00
+Tax rate: Tax rate: 0.10 | price: 0.00 | price & tax: 0.00
+, price: Tax rate: 0.10 | price: 0.00 | price & tax: 0.00
+, price & tax: Tax rate: 0.10 | price: 0.00 | price & tax: 0.00
+Tax rate: Tax rate: 0.10 | price: 10.00 | price & tax: 11.00
+, price: Tax rate: 0.10 | price: 10.00 | price & tax: 11.00
+, price & tax: Tax rate: 0.10 | price: 10.00 | price & tax: 11.00
+Tax rate: Tax rate: 0.10 | price: 20.00 | price & tax: 22.00
+, price: Tax rate: 0.10 | price: 20.00 | price & tax: 22.00
+, price & tax: Tax rate: 0.10 | price: 20.00 | price & tax: 22.00
+Tax rate: Tax rate: 0.10 | price: 30.00 | price & tax: 33.00
+, price: Tax rate: 0.10 | price: 30.00 | price & tax: 33.00
+, price & tax: Tax rate: 0.10 | price: 30.00 | price & tax: 33.00
+Tax rate: Tax rate: 0.10 | price: 40.00 | price & tax: 44.00
+, price: Tax rate: 0.10 | price: 40.00 | price & tax: 44.00
+, price & tax: Tax rate: 0.10 | price: 40.00 | price & tax: 44.00
+Tax rate: Tax rate: 0.10 | price: 50.00 | price & tax: 55.00
+, price: Tax rate: 0.10 | price: 50.00 | price & tax: 55.00
+, price & tax: Tax rate: 0.10 | price: 50.00 | price & tax: 55.00
+Tax rate: Tax rate: 0.15 | price: 30.00 | price & tax: 34.50
+, price: Tax rate: 0.15 | price: 30.00 | price & tax: 34.50
+, price & tax: Tax rate: 0.15 | price: 30.00 | price & tax: 34.50
+Tax rate: Tax rate: 0.15 | price: 40.00 | price & tax: 46.00
+, price: Tax rate: 0.15 | price: 40.00 | price & tax: 46.00
+, price & tax: Tax rate: 0.15 | price: 40.00 | price & tax: 46.00
+Tax rate: Tax rate: 0.15 | price: 50.00 | price & tax: 57.50
+, price: Tax rate: 0.15 | price: 50.00 | price & tax: 57.50
+, price & tax: Tax rate: 0.15 | price: 50.00 | price & tax: 57.50
+Tax rate: Tax rate: 0.15 | price: 0.00 | price & tax: 0.00
+, price: Tax rate: 0.15 | price: 0.00 | price & tax: 0.00
+, price & tax: Tax rate: 0.15 | price: 0.00 | price & tax: 0.00
+Tax rate: Tax rate: 0.15 | price: 10.00 | price & tax: 11.50
+, price: Tax rate: 0.15 | price: 10.00 | price & tax: 11.50
+, price & tax: Tax rate: 0.15 | price: 10.00 | price & tax: 11.50
+Tax rate: Tax rate: 0.15 | price: 20.00 | price & tax: 23.00
+, price: Tax rate: 0.15 | price: 20.00 | price & tax: 23.00
+, price & tax: Tax rate: 0.15 | price: 20.00 | price & tax: 23.00
